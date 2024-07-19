@@ -53,10 +53,6 @@
     text-decoration: none;
     text-transform: uppercase;
 
-    @include media-max(1279) {
-      color: $color-white;
-    }
-
     @include on-hover() {
       background-color: var(--color-2--1-o1);
     }
