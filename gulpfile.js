@@ -100,10 +100,6 @@ const styles = () => {
     .pipe(gulp.dest(config.styles.dist));
 };
 
-// const fonts = () => {
-//   return gulp.src(config.fonts.src).pipe(plumber()).pipe(newer(config.fonts.dist)).pipe(gulp.dest(config.fonts.dist));
-// };
-
 const clear = () => {
   return deleteAsync('dist');
 };
