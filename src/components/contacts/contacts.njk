@@ -1,0 +1,38 @@
+{% from '../../views/core-components/socials.njk' import SocialLinks %}
+
+{% macro Contacts() %}
+  <section class="section contacts">
+    <div class="container">
+      <div class="contacts__content">
+        <div class="contacts__contact">
+          <p class="contacts__contact-text">W razie jakichkolwiek pytań, zadzwoń</p>
+          <p class="contacts__contact-text is-phone">
+            <a href="tel:+48 00 000 00 00">+48 00 000 00 00</a>
+          </p>
+        <p class="contacts__contact-text">Pon. - Pt.: 07:00-20:00</p>
+        </div>
+        <div class="contacts__map">
+          <div class="contacts__map-address">
+            <p class="contacts__map-text">Nasz adres</p>
+            <address class="contacts__map-text is-address">
+              <span class="contacts__map-text is-subtext">Lorem,</span>
+                01-005 Warszawa
+            </address>
+            <a class="contacts__map-link" href="#" target="_blank">
+              <span class="fa-brands fa-telegram"></span>
+              <span class="ghost">Telegram</span>
+            </a>
+          </div>
+          <picture class="contacts__map-picture">
+            <img src="/images/warszawa-map.svg" alt="warszawa map" width="386" height="368">
+          </picture>
+        </div>
+        <div class="contacts__socials">
+          <p class="contacts__socials-text">Nasz adres e-mail</p>
+          <p class="contacts__socials-text is-email">info@lorem.center</p>
+          {{ SocialLinks() }}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endmacro %}

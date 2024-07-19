@@ -1,0 +1,50 @@
+{% from '../../views/core-components/title.njk' import Title %}
+{% from '../../views/core-components/button.njk' import Button %}
+
+{% set packageItemContent = [
+  'УЗД всього організму для жінок',
+  'Щитовидна залоза',
+  'Молочні залози',
+  'Органи черевної порожнини ( печінка, жовчний міхур, підшлункова залоза, селезінка)',
+  'Нирки та наднирокові залози',
+  'Органи малого тазу',
+  'Ціна — 2600 грн. ',
+  'Ціна по акції — 1280 грн'
+] %}
+
+{% macro Packages() %}
+  <section class="section packages">
+    <div class="container">
+      {{ Title('Пакети') }}
+      {{ PackagesList() }}
+    </div>
+  </section>
+{% endmacro %}
+
+{% macro PackageItem(title='УЗД всього організму для жінок', listItems=packageItemContent) %}
+  <article class="package">
+    <div class="package__content">
+      <h3 class="package__title">{{ title }}</h3>
+      <ul class="package__list">
+        {% for text in listItems %}
+          <li class="package__list-item">
+            <p class="package__text">{{ text }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="package__actions">
+      {{ Button(text='Переглянути детальніше', className='btn package__action') }}
+    </div>
+  </article>
+{% endmacro %}
+
+{% macro PackagesList() %}
+  <ul class="packages-list">
+    {% for _ in range(3) %}
+        <li class="packages-list__item">
+          {{ PackageItem() }}
+        </li>
+      {% endfor %}
+  </ul>
+{% endmacro %}

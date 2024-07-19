@@ -1,0 +1,44 @@
+.switcher {
+  $this: &;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__icon {
+    @include trs();
+    align-items: center;
+    font-size: 24px;
+    background-color: var(--color-2--1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    height: 24px;
+    padding: 5px;
+    width: 24px;
+
+    &.is-dark {
+      margin-left: 8px;
+      opacity: 0.3;
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__input:checked ~ .switcher__label .is-light {
+    opacity: 0.3;
+  }
+
+  &__input:checked ~ .switcher__label .is-dark {
+    opacity: 1;
+  }
+}

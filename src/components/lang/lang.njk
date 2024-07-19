@@ -1,0 +1,21 @@
+{% set langs = ['fr', 'ua'] %}
+
+{% macro Lang() %}
+  <div class="lang">
+      <div class='js-dropdown'>
+        <button class="lang__toggle js-dropdown-toggle" type="button" aria-expanded='false'>
+          <span class="lang__toggle-text">pl</span>
+          <span class="lang__toggle-icon fa-solid fa-angle-down"></span>
+        </button>
+        <div class="js-dropdown-block" aria-hidden="true">
+          <ul class="lang__list">
+            {% for lang in langs %}
+              <li class="lang__item">
+                <a class="lang__link" href='/'>{{ lang }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+    </div>
+  </div>
+{% endmacro %}

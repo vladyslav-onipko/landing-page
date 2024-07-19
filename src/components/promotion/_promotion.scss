@@ -1,0 +1,9 @@
+.promotion {
+  &__content {
+    display: flex;
+
+    @include media-max(1279) {
+      flex-direction: column;
+    }
+  }
+}

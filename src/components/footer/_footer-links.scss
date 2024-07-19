@@ -1,0 +1,40 @@
+.footer-links {
+  $this: &;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -7px;
+
+  @include media-max(767) {
+    justify-content: center;
+  }
+
+  &.is-column {
+    flex-direction: column;
+
+    @include media-max(767) {
+      align-items: center;
+    }
+
+    #{$this}__item {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item {
+    margin: 0 0 5px 0;
+    padding: 0 7px;
+  }
+
+  &__link {
+    @include trs();
+    color: var(--color-2--1);
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    @include on-hover() {
+      text-decoration: underline;
+    }
+  }
+}

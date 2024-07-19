@@ -1,0 +1,23 @@
+{#
+    Insert button.
+    @param {string} text - button inner text.
+    @param {string} className - button class.
+    @param {string} type - button type.
+    @param {string} icon - icon class.
+#}
+{% macro Button(
+    text = 'button',
+    className = 'btn',
+    type = 'button',
+    icon = '',
+    iconTitle = ''
+) %}
+    <button class="{{ className }}" type={{ type }}>
+        {% if icon %}
+            <span class="{{ icon }}" aria-hidden="true" title={{ iconTitle }}></span>
+            <span class="ghost">{{ text }}</span>
+        {%else%}
+            <span class="btn__text">{{ text | safe }}</span>
+        {% endif %}
+    </button>
+{% endmacro %}

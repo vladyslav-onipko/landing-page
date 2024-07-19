@@ -1,0 +1,37 @@
+{
+  "name": "test-task",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "gulp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "3.0.2",
+    "del": "7.1.0",
+    "gulp": "5.0.0",
+    "gulp-autoprefixer": "9.0.0",
+    "gulp-changed": "5.0.2",
+    "gulp-concat": "2.6.1",
+    "gulp-csso": "4.0.1",
+    "gulp-htmlmin": "5.0.1",
+    "gulp-imagemin": "9.1.0",
+    "gulp-newer": "1.4.0",
+    "gulp-nunjucks-render": "2.2.3",
+    "gulp-plumber": "1.2.1",
+    "gulp-rename": "2.0.0",
+    "gulp-sass": "5.1.0",
+    "gulp-uglify": "3.0.2",
+    "sass": "1.77.8",
+    "terser-webpack-plugin": "5.3.10",
+    "webpack": "5.93.0",
+    "webpack-stream": "7.0.0"
+  },
+  "dependencies": {
+    "gulp-cli": "3.0.0",
+    "swiper": "11.1.5"
+  }
+}

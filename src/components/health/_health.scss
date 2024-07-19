@@ -1,0 +1,68 @@
+.health {
+  &[class] {
+    margin: 150px 0 120px;
+
+    @include media-max(767) {
+      margin: 120px 0;
+    }
+  }
+
+  &__content {
+    margin: 0 auto;
+    max-width: 740px;
+    position: relative;
+  }
+
+  &__logo {
+    display: block;
+    height: 94px;
+    left: 50%;
+    position: absolute;
+    top: -50px;
+    transform: translateX(-50%);
+    width: 112px;
+
+    @include media-max(767) {
+      height: 75px;
+      width: 90px;
+    }
+  }
+
+  &__title {
+    color: $color-black;
+    font-family: var(--typo-2);
+    font-size: 8.2rem;
+    line-height: 70px;
+
+    @include media-max(767) {
+      font-size: 3.5rem;
+      line-height: 40px;
+    }
+
+    &-text {
+      &.is-highlighted {
+        color: var(--color-2--1);
+      }
+
+      &:nth-child(1) {
+        padding-left: 25px;
+
+        @include media-max(767) {
+          padding-left: 30px;
+        }
+      }
+
+      &:nth-child(2) {
+        display: block;
+      }
+
+      &:nth-child(3) {
+        padding-left: 240px;
+
+        @include media-max(767) {
+          padding-left: 102px;
+        }
+      }
+    }
+  }
+}

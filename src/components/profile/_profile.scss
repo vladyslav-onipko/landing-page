@@ -1,0 +1,15 @@
+.profile {
+  @include trs();
+  background-color: var(--color-2--1-o1);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 40px;
+  margin-right: 20px;
+  padding: 11px 12px;
+  width: 40px;
+
+  @include on-hover() {
+    box-shadow: 0px 0px 20px 0px rgba(204, 142, 30, 0.5);
+  }
+}

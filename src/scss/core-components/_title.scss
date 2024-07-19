@@ -1,0 +1,16 @@
+.title {
+  color: var(--color-1--1);
+  font-size: 4rem;
+  font-family: var(--typo-2);
+  font-weight: var(--fw-normal);
+  margin-bottom: 50px;
+  text-transform: uppercase;
+
+  @include media-max(1279) {
+    margin-bottom: 30px;
+  }
+
+  @include media-max(767) {
+    text-align: center;
+  }
+}

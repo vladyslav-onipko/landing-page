@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-5--1);
+  color: $color-white;
+  font-family: var(--typo-1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
+  overflow-x: hidden;
+  position: relative;
+
+  &.dark-mode {
+    background-color: var(--color-3--1);
+  }
+}
+
+img {
+  font-family: 'object-fit: cover; object-position: center;';
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+p {
+  color: var(--color-1--1);
+  font-size: 1.6rem;
+}
+
+ul {
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-5--1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-2--1);
+  border-radius: 6px;
+}

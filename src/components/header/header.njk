@@ -1,0 +1,40 @@
+{% from '../logo/logo.njk' import Logo %}
+{% from '../navigation/navigation.njk' import Navigation, NavToggle, MobileNav %}
+{% from '../profile/profile.njk' import Profile %}
+{% from '../../views/core-components/button.njk' import Button %}
+{% from '../lang/lang.njk' import Lang %}
+{% from '../theme-switcher/theme-switcher.njk' import ThemeSwitcher %}
+
+{#
+    Header template.
+#}
+{% macro Header() %}
+    <div class="header-wrapper" >
+      <header class="header" role="banner">
+        <div class="header__logo">
+          {{ Logo() }}
+        </div>
+        <div class="header__components">
+          <div class="header__nav">
+            {{ Navigation() }}
+          </div>
+          <div class="header__actions">
+            {{ Profile() }}
+            {{ Button(text='Skontaktuj się z nami') }}
+          </div>
+          <div class="header__lang">
+            {{ Lang() }}
+          </div>
+          <div class="header__theme">
+            {{ ThemeSwitcher() }}
+          </div>
+        </div>
+        <div class="header__nav is-aside js-mob-nav">
+          {{ MobileNav() }}
+        </div>
+        <nav class="header__nav-toggle">
+          {{ NavToggle() }}
+        </nav>
+      </header>
+    </div>
+{% endmacro %}

@@ -1,0 +1,56 @@
+{% from '../../views/core-components/button.njk' import Button %}
+{% from '../lang/lang.njk' import Lang %}
+{% from '../profile/profile.njk' import Profile %}
+
+{% set links = [
+  {text: 'Nasi Lekarze'}, 
+  {text: 'Kontakt'}
+] %}
+
+{% set dropdownButtons = [ 
+  {text: 'Programs'}, 
+  {text: 'O nas'} 
+] %}
+
+{% macro Navigation() %}
+  <nav class="nav" role="navigation">
+    <ul class="nav__list">
+      {% for link in links %}
+        <li class="nav__item"><a class="nav__link" href="/">{{ link.text }}</a></li>
+      {% endfor %}
+      {%- for dropdown in dropdownButtons -%}
+        <li class="nav__item">
+          <div class="js-dropdown">
+            <button class="nav__toggle js-dropdown-toggle" type="button" aria-expanded='false'>
+              <span class="nav__toggle-text">{{ dropdown.text }}</span>
+              <span class="nav__toggle-icon fa-solid fa-angle-down"></span>
+            </button>
+            <div class="js-dropdown-block" aria-hidden="true">
+              <p>Here can be any content you need...</p>
+            </div>
+          </div>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </nav>
+{% endmacro %}
+
+{% macro MobileNav() %}
+  <div class="mob-nav" aria-modal="true" role="dialog">
+    {{ Lang() }}
+    {{ Button(className='btn is-only-icon mob-nav__close', icon='fa-solid fa-xmark', iconTitle='close') }}
+    <div class="mob-nav__actions">
+      {{ Profile() }}
+      {{ Button(text='Skontaktuj się z nami') }}
+    </div>
+    {{ Navigation() }}
+  </div>
+  <div class="mob-nav-overlay js-mob-nav-bg" aria-expanded="false"></div>
+{% endmacro %}
+
+{% macro NavToggle() %}
+  <button class="mob-nav-toggle js-mob-nav-toggle" aria-haspopup="true">
+    <span class="ghost">navigation toggle</span>
+    <span class="fa-solid fa-bars"></span>
+  </button>
+{% endmacro %}

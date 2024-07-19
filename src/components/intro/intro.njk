@@ -1,0 +1,26 @@
+{% from '../../views/core-components/title.njk' import Title %}
+
+{% macro Intro() %}
+  <section class="section intro">
+    <div class="container">
+      <div class="intro__wrapper">
+        <div class="intro__info">
+          {{ Title(text='Aкції та Акційні пакети', className='title intro__title') }}
+          <p class="intro__info-text">
+            Ми завжди прагнемо підвищити рівень сервісу надаваних медичних послуг, 
+            і вдячні вам за залишений позитивний відгук. Ми беремо до уваги всі коментарі та побажання, 
+            які відносяться до нашої роботи. Дякуємо за ваш вибір.
+            </p>
+        </div>
+        <div class="intro__gallery">
+          <picture class="intro__picture">
+            <img src="https://picsum.photos/440/415" alt="people" width="440" height="415">
+          </picture>
+          <span class="intro__logo">
+            <img src="/images/intro-logo.svg" alt="hospital snake" width="120" height="122">
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endmacro %}

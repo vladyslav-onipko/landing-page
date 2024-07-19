@@ -1,0 +1,85 @@
+{% from '../../views/core-components/title.njk' import Title %}
+{% from '../../views/core-components/button.njk' import Button %}
+
+{% macro Promotion() %}
+  <section class="section promotion">
+    <div class="promotion__container container">
+      {{ Title('Акційні пропозиції') }}
+      <div class="promotion__content">
+        {{ PromotionSlider() }}
+        {{ PromotionForm() }}
+      </div>
+    </div>
+  </section>
+{% endmacro %}
+
+{% macro PromotionSlider() %}
+  <div class="promotion-slider">
+    <button type="button" class="promotion-slider__control is-swiper-next">
+        <span class="ghost">next slide</span>
+        <span class="promotion-slider__control-icon fa-solid fa-play"></span>
+      </button>
+      <button type="button" class="promotion-slider__control is-swiper-prev">
+        <span class="ghost">prev slide</span>
+        <span class="promotion-slider__control-icon fa-solid fa-play"></span>
+      </button>
+    <div class="promotion-slider__container swiper">
+      <ul class="promotion-slider__wrapper swiper-wrapper">
+        {% for i in range(5) %}
+          <li class="promotion-slider__item swiper-slide">
+            {{ PromotionItem(imageId = i) }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro PromotionForm() %}
+  <form class="promotion-form" action="/">
+    <fieldset class="promotion-form__fieldset">
+      <legend class="promotion-form__legend">Czekamy na Ciebie!</legend>
+      <div class="promotion-form__fields">
+        <div class="promotion-form__field">
+          <label class="promotion-form__label" for="name">Imię i nazwisko</label>
+          <input class="promotion-form__input" type="text" id="name" name="name" placeholder="name" required>
+        </div>
+        <div class="promotion-form__field">
+          <label class="promotion-form__label" for="phone">Phone</label>
+          <input class="promotion-form__input" type="tel" id="phone" name="phone" placeholder="+48 XXX XXX XXX" required>
+        </div>
+        <div class="promotion-form__field">
+          <label class="promotion-form__label" for="email">E-mail</label>
+          <input class="promotion-form__input" type="email" id="email" name="email" placeholder="name@gmail.com" required>
+        </div>
+        <div class="promotion-form__field">
+          <input class="promotion-form__checkbox" type="checkbox" id="cph" name="cph" required>
+          <label class="promotion-form__label" for="cph">
+            Wypełnienie formularza zgłoszeniowego jest równoznaczne z wyrażeniem zgody
+            na przetwarzanie danych osobowych, otrzymywanie newslettera, oraz kontakt telefoniczny
+          </label>        
+        </div>
+      </div>
+    </fieldset>
+    <div class="promotion-form__actions">
+      {{ Button(text='Wyślij', type='submit', className="promotion-form__action btn is-secondary") }}
+    </div>
+  </form>
+{% endmacro %}
+
+{% macro PromotionItem(
+  imageId = 0, 
+  title = 'Акція "-40% на пробне заняття з кінезітерапії"', 
+  content='Маєте чудову нагоду потурбуватись про власне здоров’я за вигідною пропозицією вартістю 680 408 грн.'
+) %}
+  <div class="promotion-item">
+    <picture class="promotion-item__picture">
+      <img src="{{ 'https://picsum.photos/630/294?random=' + imageId }}" alt="slide picture">
+    </picture>
+    <div class="promotion-item__content">
+      <h3 class="promotion-item__title">{{ title }}</h3>
+      <p class="promotion-item__teaser">{{ content }}</p>
+      <a class="promotion-item__link" href="/">Переглянути детальніше</a>
+    </div>
+  </div>
+{% endmacro %}

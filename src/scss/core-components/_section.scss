@@ -1,0 +1,11 @@
+.section {
+  margin: 90px 0;
+
+  @include media-max(1279) {
+    margin: 70px 0;
+  }
+
+  @include media-max(767) {
+    margin: 50px 0;
+  }
+}

@@ -1,0 +1,59 @@
+%table-space {
+  position: relative;
+
+  &::after {
+    background-color: $color-white;
+    content: '';
+    display: block;
+    height: 25px;
+    margin-top: 8px;
+    width: 100%;
+  }
+}
+
+.prices-table {
+  display: block;
+  max-width: 1080px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+
+  table {
+    border-collapse: collapse;
+    font-family: var(--typo-2);
+    font-weight: var(--fw-normal);
+    max-width: 100%;
+    min-width: 1030px;
+    width: 100%;
+  }
+
+  thead {
+    @extend %table-space;
+    margin-top: 0;
+  }
+
+  th {
+    background-color: var(--color-3--1);
+    color: var(--color-1--1);
+    font-size: 3.2rem;
+    height: 72px;
+    padding: 16px;
+    text-align: center;
+  }
+
+  td {
+    @extend %table-space;
+    background-color: var(--color-4--1);
+    color: $color-black;
+    font-size: 2.4rem;
+    min-width: 140px;
+    padding-top: 8px;
+    text-align: center;
+  }
+
+  tr {
+    td:nth-child(2) {
+      text-align: left;
+    }
+  }
+}

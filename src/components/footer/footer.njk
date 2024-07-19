@@ -1,0 +1,42 @@
+{% from '../../views/core-components/socials.njk' import SocialLinks %}
+
+{% set defaultLinks = ['O nas', 'Usługi', 'Blog', 'Praca', 'Cennik'] %}
+{% set secondaryLinks = ['polityka prywatności', 'regulamin', 'przygotowanie do badań', 'informacja o prawach pacjenta', 'polityka cookie'] %}
+
+{% macro Footer() %}
+  <footer class="footer" role="contentinfo">
+    <div class="footer__contact">
+      <p class="footer__contact-text">
+        Jakiekolwiek wykorzystanie lub kopiowanie wybranych materiałów
+         ze strony jest dozwolone tylko za zgodą właściciela praw autorskich
+          i tylko z powołaniem się na źródło.
+      </p>
+      <img class="footer__contact-image" src="/images/footer-visa.svg" alt="visa" width="70" height="18">
+    </div>
+    <div class="footer__socials">
+      {{ FooterLinks(links=defaultLinks) }}
+      <div class="footer__socials-links">
+        <div class="footer__socials-wrapper">
+          <p class="footer__socials-text">Lokalizacja</p>
+          <p class="footer__socials-text">Skontaktuj się z nami</p>
+        </div>
+        {{ SocialLinks() }}
+      </div>
+    </div>
+    <div class="footer__links">
+      {{ FooterLinks(links=secondaryLinks, modifier='is-column') }}
+    </div>
+  </footer>
+{% endmacro %}
+
+{% macro FooterLinks(links=[], modifier='') %}
+  <ul class="footer-links {{ modifier }}">
+    {% for link in links %}
+      <li class="footer-links__item">
+        <a class="footer-links__link" href="#">
+          <span class="footer-links__text">{{ link }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}

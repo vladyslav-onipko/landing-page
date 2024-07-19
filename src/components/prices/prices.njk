@@ -1,0 +1,39 @@
+{% from '../../views/core-components/title.njk' import Title %}
+
+{% macro Prices() %}
+  <section class="section prices">
+    <div class="container">
+      {{ Title('Прайс-лист') }}
+      <div class="prices__content">
+        <div class="prices__content-wrapper">
+          {% for _ in range(5) %}
+            {{ PricesTable() }}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endmacro %}
+
+{% macro PricesTable() %}
+  <div class="prices-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Kod</th>
+          <th>Konsultacje</th>
+          <th>Cena brutto</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for _ in range(4) %}
+          <tr>
+            <td>89.000</td>
+            <td>Konsultacja anestezjologiczna</td>
+            <td>190 zł</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endmacro %}

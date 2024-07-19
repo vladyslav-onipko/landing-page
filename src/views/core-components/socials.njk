@@ -1,0 +1,32 @@
+{% set linksDefault = [
+    {
+        title: 'Facebook',
+        icon: 'fab fa-facebook'
+    },
+    {
+        title: 'Linkedin',
+        icon: 'fab fa-linkedin'
+    },
+    {
+        title: 'Youtube',
+        icon: 'fab fa-youtube'
+    },
+    {
+        title: 'Instagram',
+        icon: 'fab fa-square-instagram'
+    }
+] %}
+
+{% macro SocialLinks(links = linksDefault) %}
+    <ul class="social-links">
+      {% for item in links %}
+          <li class="social-links__item">
+              <a href="#" class="social-links__link" target="_blank">
+                  <span class="social-links__icon {{item.icon}}"></span>
+                  <span class="social-links__link-text ghost">{{ item.title }}</span>
+              </a>
+          </li>
+      {% endfor %}
+      {{ caller() if caller }}
+  </ul>
+{% endmacro %}

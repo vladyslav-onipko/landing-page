@@ -1,0 +1,41 @@
+{% from 'header/header.njk' import Header %}
+{% from 'intro/intro.njk' import Intro %}
+{% from 'packages/packages.njk' import Packages %}
+{% from 'promotion/promotion.njk' import Promotion %}
+{% from 'prices/prices.njk' import Prices %}
+{% from 'health/health.njk' import Health %}
+{% from 'contacts/contacts.njk' import Contacts %}
+{% from 'footer/footer.njk' import Footer %}
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test task</title>
+  <link rel="stylesheet" href="./css/core.bundle.css" />
+  <script src="./js/core.bundle.js" defer></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet"></link>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+  <div class="site-wrapper">
+    <div class="site-wrapper__header">
+      {{ Header() }}
+    </div>
+    <div class="site-wrapper__main">
+      <main role="main" class="site-content">
+        {{ Intro() }}
+        {{ Packages() }}
+        {{ Promotion() }}
+        {{ Prices() }}
+        {{ Health() }}
+        {{ Contacts() }}
+      </main>
+    </div>
+    <div class="site-wrapper__footer">
+      {{ Footer() }}
+    </div>
+  </div>
+</body>
+</html>

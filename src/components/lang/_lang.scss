@@ -1,0 +1,73 @@
+.lang {
+  $this: &;
+
+  @include media-max(1279) {
+    left: 10px;
+    position: absolute;
+    top: 0;
+  }
+
+  &__toggle {
+    @include trs();
+    background-color: transparent;
+    border: none;
+    color: var(--color-1--1);
+    cursor: pointer;
+    font-size: 1.6rem;
+    padding: 5px;
+    text-transform: uppercase;
+
+    @include media-max(1279) {
+      color: $color-white;
+    }
+
+    @include on-hover() {
+      background-color: var(--color-2--1-o1);
+    }
+
+    &.is-open {
+      #{$this}__toggle-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__toggle-icon {
+    @include trs();
+    margin-left: 6px;
+    pointer-events: none;
+
+    &::before {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__link {
+    align-items: center;
+    color: var(--color-1--1);
+    display: flex;
+    font-size: 1.6rem;
+    justify-content: center;
+    min-height: 40px;
+    min-width: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    @include media-max(1279) {
+      color: $color-white;
+    }
+
+    @include on-hover() {
+      background-color: var(--color-2--1-o1);
+    }
+  }
+
+  .js-dropdown-block {
+    background-color: $color-white;
+    padding: 0;
+
+    @include media-max(1279) {
+      border-color: $color-white;
+    }
+  }
+}

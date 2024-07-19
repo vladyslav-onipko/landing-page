@@ -1,0 +1,137 @@
+.contacts {
+  &__content {
+    align-items: center;
+    background-color: $color-white;
+    display: flex;
+    justify-content: space-between;
+    padding: 90px 100px;
+    width: 100%;
+
+    @include media-max(1279) {
+      padding: 50px 15px;
+    }
+
+    @include media-max(767) {
+      flex-direction: column;
+      padding: 30px 15px;
+    }
+  }
+
+  &__contact {
+    @include media-max(1279) {
+      text-align: center;
+    }
+
+    &-text {
+      color: var(--color-1--1);
+      font-size: 1.6rem;
+
+      &.is-phone {
+        font-family: var(--typo-2);
+        font-size: 3.2rem;
+        margin: 13px 0 18px;
+
+        @include media-max(1279) {
+          font-size: 2.2rem;
+        }
+
+        a {
+          @include trs();
+          color: var(--color-1--1);
+          text-decoration: none;
+
+          @include on-hover() {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  &__map {
+    color: $color-white;
+    position: relative;
+
+    @include media-max(767) {
+      margin: 110px 0;
+    }
+
+    &-picture {
+      display: block;
+      height: auto;
+      left: -70px;
+      position: absolute;
+      top: -140px;
+      width: 386px;
+
+      @include media-max(1279) {
+        left: -35px;
+        top: -85px;
+        width: 250px;
+      }
+    }
+
+    &-address {
+      position: relative;
+      z-index: 5;
+    }
+
+    &-link {
+      margin-left: 15px;
+      text-decoration: none;
+
+      @include on-hover() {
+        span[class*='fa-'] {
+          color: var(--color-1--1);
+        }
+      }
+
+      span[class*='fa-'] {
+        @include trs();
+        color: $color-white;
+        font-size: 2.5rem;
+      }
+    }
+
+    &-text {
+      color: $color-white;
+
+      &.is-address {
+        display: inline-block;
+        font-family: var(--typo-2);
+        font-size: 3.2rem;
+        font-style: normal;
+
+        @include media-max(1279) {
+          font-size: 2.2rem;
+        }
+      }
+
+      &.is-subtext {
+        display: block;
+      }
+    }
+  }
+
+  &__socials {
+    @include media-max(1279) {
+      text-align: center;
+    }
+
+    &-text {
+      &.is-email {
+        font-family: var(--typo-2);
+        font-size: 3.2rem;
+        margin-bottom: 30px;
+
+        @include media-max(1279) {
+          font-size: 2.2rem;
+        }
+
+        @include media-max(767) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

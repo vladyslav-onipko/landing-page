@@ -1,0 +1,23 @@
+.packages {
+  $this: &;
+
+  .packages-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+
+    &__item {
+      margin-bottom: 20px;
+      padding: 0 10px;
+      width: calc(100% / 3);
+
+      @include media-max(1279) {
+        width: calc(100% / 2);
+      }
+
+      @include media-max(767) {
+        width: 100%;
+      }
+    }
+  }
+}

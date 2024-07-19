@@ -1,0 +1,70 @@
+.promotion-slider {
+  $this: &;
+
+  position: relative;
+  width: calc(100% - 420px);
+
+  @include media-max(1279) {
+    width: 100%;
+  }
+
+  &__container {
+    width: calc(100% - 210px);
+
+    @include media-max(1279) {
+      width: calc(100% - 210px);
+    }
+
+    @include media-max(767) {
+      width: calc(100% - 80px);
+    }
+  }
+
+  &__control {
+    @include trs();
+    align-items: center;
+    background-color: var(--color-4--1);
+    border: 0;
+    color: var(--color-2--1);
+    cursor: pointer;
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    height: 88px;
+    line-height: 0.9;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 88px;
+    z-index: 20;
+
+    @include media-max(767) {
+      height: 35px;
+      width: 35px;
+    }
+
+    @include on-hover() {
+      box-shadow: 0px 0px 20px 0px rgba(204, 142, 30, 0.5);
+    }
+
+    &.is-swiper-next {
+      border-radius: 0 300px 300px 0;
+      right: 0;
+    }
+
+    &.is-swiper-prev {
+      border-radius: 300px 0 0 300px;
+
+      #{$this}__control-icon {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:disabled {
+      opacity: 0.1;
+      pointer-events: none;
+    }
+  }
+}

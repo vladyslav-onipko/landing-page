@@ -1,0 +1,31 @@
+.package {
+  background-color: $color-white;
+  border: 1px solid var(--color-2--1-o1);
+  padding: 24px;
+
+  &__title {
+    color: var(--color-2--1);
+    font-size: 2.4rem;
+    font-family: var(--typo-2);
+    margin-bottom: 15px;
+  }
+
+  &__content {
+    margin-bottom: 15px;
+  }
+
+  &__list-item {
+    padding: 3px 0;
+  }
+
+  &__actions {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  & &__action {
+    min-height: 50px;
+    width: 100%;
+  }
+}

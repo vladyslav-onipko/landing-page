@@ -1,0 +1,39 @@
+// Site colors.
+$color-1--1: #2b3f5b !default;
+$color-2--1: #cc8e1e !default;
+$color-3--1: #faf4e8 !default;
+$color-4--1: #f1efe9 !default;
+$color-5--1: #f6f5f2 !default;
+$color-6--1: #b6bbc3 !default;
+$color-7--1: #646e7c !default;
+
+// Neutral colors
+$color-black: #000;
+$color-white: #fff;
+
+:root {
+  // General settings
+
+  // Site fonts
+  --typo-1: 'Roboto', Arial, Tahoma, sans-serif;
+  --typo-2: 'Oranienbaum', Arial, Tahoma, sans-serif;
+
+  // Font weight
+  --fw-normal: 400;
+
+  // Site colors
+  --color-1--1: #{$color-1--1}; // #2b3f5b
+  --color-2--1: #{$color-2--1}; // #cc8e1e
+  --color-3--1: #{$color-3--1}; // #faf4e8
+  --color-4--1: #{$color-4--1}; // #f1efe9
+  --color-5--1: #{$color-5--1}; // #f6f5f2
+  --color-6--1: #{$color-6--1}; // #b6bbc3
+  --color-7--1: #{$color-7--1}; //#646e7c
+
+  --color-2--1-o1: #{rgba($color-2--1, 0.1)}; // #cc8e1e o 10%
+  --color-2--1-o27: #{rgba($color-2--1, 0.27)}; // #cc8e1e o 27%
+  --color-2--1-o6: #{rgba($color-2--1, 0.6)}; // #cc8e1e o 60%
+
+  --form-input-placeholder: #{$color-6--1}; // #b6bbc3
+  --form-input-label: #{$color-7--1}; //#646e7c
+}

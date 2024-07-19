@@ -1,0 +1,34 @@
+@import './utils/config';
+
+@import './general/base';
+@import './general/main';
+@import './general/typography';
+@import './utils/mixins';
+@import './utils/helpers';
+
+@import '../components/header/header';
+@import '../components//logo/logo';
+@import '../components/navigation/navigation';
+@import '../components/profile/profile';
+@import '../components/lang/lang';
+@import '../components/theme-switcher/theme-switcher';
+@import '../components/intro/intro';
+@import '../components/packages/packages';
+@import '../components/packages/package-item';
+@import '../components/promotion/promotion';
+@import '../components/promotion/promotion-item';
+@import '../components/promotion/promotion-form';
+@import '../components/promotion/promotion-slider';
+@import '../components/prices/prices';
+@import '../components/prices/prices-table';
+@import '../components/health/health';
+@import '../components/contacts/contacts';
+@import '../components/footer/footer';
+@import '../components/footer/footer-links';
+
+@import './core-components/dropdown';
+@import './core-components/button';
+@import './core-components/section';
+@import './core-components//title';
+@import './core-components/container';
+@import './core-components/socials';
