@@ -22,7 +22,7 @@
       {% for item in links %}
           <li class="social-links__item">
               <a href="#" class="social-links__link" target="_blank">
-                  <span class="social-links__icon {{item.icon}}"></span>
+                  <span class="social-links__icon {{ item.icon }}" aria-hidden="true"></span>
                   <span class="social-links__link-text ghost">{{ item.title }}</span>
               </a>
           </li>

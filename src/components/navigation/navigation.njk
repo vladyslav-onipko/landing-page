@@ -23,7 +23,7 @@
           <div class="js-dropdown">
             <button class="nav__toggle js-dropdown-toggle" type="button" aria-expanded='false'>
               <span class="nav__toggle-text">{{ dropdown.text }}</span>
-              <span class="nav__toggle-icon fa-solid fa-angle-down"></span>
+              <span class="nav__toggle-icon fa-solid fa-angle-down" aria-hidden="true"></span>
             </button>
             <div class="js-dropdown-block" aria-hidden="true">
               <p>Here can be any content you need...</p>
@@ -49,8 +49,8 @@
 {% endmacro %}
 
 {% macro NavToggle() %}
-  <button class="mob-nav-toggle js-mob-nav-toggle" aria-haspopup="true">
+  <button type="button" class="mob-nav-toggle js-mob-nav-toggle" aria-haspopup="true">
     <span class="ghost">navigation toggle</span>
-    <span class="fa-solid fa-bars"></span>
+    <span class="fa-solid fa-bars" aria-hidden="true"></span>
   </button>
 {% endmacro %}
