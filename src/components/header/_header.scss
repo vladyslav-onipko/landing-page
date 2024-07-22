@@ -1,6 +1,15 @@
 .header-wrapper {
+  background: var(--color-5--1);
+  left: 0;
   padding: 20px 0;
+  position: fixed;
+  top: 0;
   width: 100%;
+  z-index: 100;
+
+  body.dark-mode & {
+    background-color: var(--color-3--1);
+  }
 }
 
 .header {

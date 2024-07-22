@@ -1,10 +1,10 @@
 @import './utils/config';
+@import './utils/mixins';
+@import './utils/helpers';
 
 @import './general/base';
 @import './general/main';
 @import './general/typography';
-@import './utils/mixins';
-@import './utils/helpers';
 
 @import '../components/header/header';
 @import '../components//logo/logo';

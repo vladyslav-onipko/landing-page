@@ -84,7 +84,7 @@
         transform: translate(-5px, -100%);
 
         @include media-max(1279) {
-          border-bottom-color: var(--color-2--1);
+          border-bottom-color: $color-white;
           top: calc(100% + 20px);
         }
       }
@@ -120,8 +120,7 @@
       padding: 45px 25px;
 
       @include media-max(1279) {
-        background-color: var(--color-2--1);
-        border-color: var(--color-2--1);
+        border-top: none;
         transform: translateY(20px);
       }
     }
